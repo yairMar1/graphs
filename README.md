@@ -59,13 +59,13 @@ isContainsCycle:
 isBipartite:
 *****************
 
-1. **Algorithm Choice**: BFS is commonly used for checking bipartiteness in graphs due to its simplicity and effectiveness. It traverses the graph level by level, assigning colors to vertices in an alternating fashion.
+1. **Algorithm Choice**: This function utilizes a depth-first search (DFS) approach for checking bipartiteness in graphs. DFS is effective for traversing connected components and assigning colors to vertices.
 
-2. **Bipartite Graphs**: A graph is bipartite if its vertices can be divided into two disjoint sets such that every edge connects vertices from different sets. BFS exploits this property by coloring vertices alternately as it traverses the graph.
+2. **Bipartite Graphs**: A graph is bipartite if its vertices can be partitioned into two disjoint sets such that no edge connects vertices within the same set. DFS explores the graph, coloring vertices alternatively and ensuring no adjacent vertices have the same color.
 
-3. **Coloring Technique**: In this algorithm, BFS assigns colors (represented by integers) to vertices such that adjacent vertices have different colors. If at any point during BFS traversal, it encounters an edge connecting vertices of the same color, the graph is not bipartite.
+3. **Coloring Technique**: Vertices are colored using two distinct colors, represented by integers. The function employs DFS to traverse the graph, assigning colors to vertices and detecting violations of bipartiteness.
 
-4. **Implementation**: The implementation maintains two sets, partitionA and partitionB, representing the two partitions of the bipartite graph. BFS assigns colors to vertices and places them in their respective partitions. If at any point it encounters a violation of bipartiteness, it returns a message indicating that the graph is not bipartite. Otherwise, it constructs and returns a string representation of the bipartite partitions.
+4. **Implementation**: The algorithm initializes two sets, partitionA and partitionB, to store vertices belonging to each partition. DFS explores the graph, coloring vertices alternately and checking for violations of bipartiteness. If a violation is found, the function returns "0 (false)", indicating that the graph is not bipartite.
 
 5. **Output**: Returns `Graph is bipartite: A={..} B={..}` if the graph is bipartite, where `{...}` represents the vertices in each partition. If the graph is not bipartite, returns `0 (false)`.
 
