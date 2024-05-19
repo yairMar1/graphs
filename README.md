@@ -1,6 +1,8 @@
 ***************************************
 Definitions:
 ***************************************
+# OPP_EX1
+## classes: 
 **Connected graph**  a graph that through one vertex we can reach every other vertex in the graph.
 
 **shortest way**
